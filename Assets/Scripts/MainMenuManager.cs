@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
     public GameObject OptionMenu;
+    public GameObject MainMenu;
     public void OnClickPlay()
     {
         SceneManager.LoadScene("TerrainScene");
@@ -13,6 +14,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void OnClickOptions()
     {
+        MainMenu.SetActive(false);
         OptionMenu.SetActive(true);
     }
 
@@ -24,6 +26,7 @@ public class MainMenuManager : MonoBehaviour
     public void OnClickBackOptions()
     {
         OptionMenu.SetActive(false);
+        MainMenu.SetActive(true);
     }
     // Start is called before the first frame update
     void Start()
